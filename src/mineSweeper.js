@@ -174,7 +174,7 @@ class MineSweeper {
 
   log(message) {
     console.log(
-      '[Sandbox %ix%i] %s',
+      this.drawGameBoard() + '\n\n[Sandbox %ix%i] %s',
       this.gameBoard[0].length,
       this.gameBoard.length,
       message

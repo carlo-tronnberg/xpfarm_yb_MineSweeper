@@ -1,21 +1,21 @@
 # Repo Metrics
-## Tests ❌
-Result: FAILURE
+## Tests ✅
+Result: SUCCESS
 
-Failed tests: 1
+Failed tests: 0
 
-Passed tests: 0
+Passed tests: 24
 
 ## Coverage ✅
 | Type | Total | Covered | Skipped | Percentage |
 |------|------:|--------:|--------:|------------|
-| lines | 3 | 3 | 0 | 100.00% |
-| statements | 3 | 3 | 0 | 100.00% |
-| functions | 2 | 2 | 0 | 100.00% |
-| branches | 0 | 0 | 0 | 100.00% |
+| lines | 82 | 82 | 0 | 100.00% |
+| statements | 87 | 87 | 0 | 100.00% |
+| functions | 26 | 26 | 0 | 100.00% |
+| branches | 30 | 30 | 0 | 100.00% |
 
 ## Complexity ✅
-Cyclomatic complexity: 1
+Cyclomatic complexity: 0
 
 [Full report](complexity-report.md)
 
