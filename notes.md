@@ -63,3 +63,4 @@
 - User story #3 🚧
   - Scenario #1 🔴
   - Scenario #1 🟢
+  - Scenario #2 🔨
