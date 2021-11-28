@@ -1,11 +1,13 @@
-const { xpfarm_yb_MineSweeper } = require('../src/mineSweeper');
+const { MineSweeper } = require('../src/mineSweeper');
 
-describe('xpfarm_yb_MineSweeper', () => {
-  it('Start a new mineSweeper', () => {
-    const mineSweeper = new xpfarm_yb_MineSweeper();
-
-    expect(mineSweeper.getStatus()).toBe('running');
+describe("I want to play a game of Mine Sweeper where I'll win if I clear the board without stepping on a bomb", () => {
+  describe('US1 Game Board Creation', () => {
+    it.each([[1, 1, [[' ']]]])(
+      'Given a Game Board width %i and height %i,    When starting the game,    Then I should get the empty Game Board %o',
+      (width, height, gameBoard) => {
+        const game = new Game(width, height);
+        expect(game.getBoard()).toEqual(gameBoard);
+      }
+    );
   });
-  
 });
-

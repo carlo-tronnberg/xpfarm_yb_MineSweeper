@@ -1,4 +1,4 @@
-class xpfarm_yb_MineSweeper {
+class MineSweeper {
   constructor() {
     this.status = 'started';
   }
@@ -8,5 +8,4 @@ class xpfarm_yb_MineSweeper {
   }
 }
 
-module.exports = { xpfarm_yb_MineSweeper };
-
+module.exports = { MineSweeper };
