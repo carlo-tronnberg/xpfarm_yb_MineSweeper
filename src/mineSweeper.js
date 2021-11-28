@@ -49,6 +49,10 @@ class MineSweeper {
       this.gameBoard[this.gameBoard[0].length - 1 - y][x] = value;
   }
 
+  getSquareValue(x, y) {
+    return this.gameBoard[this.gameBoard[0].length - 1 - y][x];
+  }
+
   allowOperation(x, y) {
     return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
   }
@@ -60,14 +64,38 @@ class MineSweeper {
       this.setSquareValue(x, y, 'X');
       message = 'BOOM! - Game Over';
     } else {
-      this.setSquareValue(x, y, '_');
+      this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
       this.status = this.GAME_RUNNING;
     }
     this.log(message);
   }
 
+  getNeighbouringBombsCount(x, y) {
+    // Get bomb count for the 8 neighboring squares (but only within the board)
+    var count = 0;
+    count += this.getBombAt(x - 1, y - 1);
+    count += this.getBombAt(x - 1, y);
+    count += this.getBombAt(x - 1, y + 1);
+    count += this.getBombAt(x, y - 1);
+    count += this.getBombAt(x, y + 1);
+    count += this.getBombAt(x + 1, y - 1);
+    count += this.getBombAt(x + 1, y);
+    count += this.getBombAt(x + 1, y + 1);
+
+    return count;
+  }
+
   getBombAt(x, y) {
-    return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
+    if (
+      this.valueIsBetween(x, 0, this.gameBoard[0].length - 1) &&
+      this.valueIsBetween(y, 0, this.gameBoard.length - 1)
+    ) {
+      return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
+    }
+    return 0;
+  }
+  valueIsBetween(value, min, max) {
+    return value >= min && value <= max;
   }
 
   log(message) {
