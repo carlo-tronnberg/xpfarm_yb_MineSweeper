@@ -92,6 +92,15 @@ class MineSweeper {
     return isWinner;
   }
 
+  showBombs() {
+    for (var i = 0; i < this.gameBoard.length; i++) {
+      for (let j = 0; j < this.gameBoard[i].length; j++) {
+        if (this.bombBoard[i][j] == 1 && this.gameBoard[i][j] != '*')
+          this.gameBoard[i][j] = 'X';
+      }
+    }
+  }
+
   squareIsSet(i, j) {
     return this.gameBoard[i][j] == ' ' && this.bombBoard[i][j] != 1;
   }
