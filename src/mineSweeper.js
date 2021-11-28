@@ -24,7 +24,16 @@ class MineSweeper {
   }
 
   drawGameBoard() {
-    return '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+    let gameBoardString = '';
+    for (var i = 0; i < this.gameBoard.length; i++) {
+      gameBoardString += '+-'.repeat(this.gameBoard[0].length) + '+\n|';
+      for (let j = 0; j < this.gameBoard[i].length; j++) {
+        gameBoardString += this.gameBoard[i][j] + '|';
+      }
+      gameBoardString += '\n';
+    }
+    gameBoardString += '+-'.repeat(this.gameBoard[0].length) + '+';
+    return gameBoardString;
   }
 
   log(message) {
