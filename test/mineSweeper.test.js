@@ -135,10 +135,7 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
           [0, 1, 0, 1],
         ]);
         game.markBomb(x, y);
-        game.markBomb(0, 2);
         expect(game.getSquareValue(x, y)).toBe('*');
-        game.unmarkBomb(x, y);
-        expect(game.getSquareValue(x, y)).toBe(' ');
       }
     );
   });

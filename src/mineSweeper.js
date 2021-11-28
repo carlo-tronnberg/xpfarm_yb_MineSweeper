@@ -95,6 +95,11 @@ class MineSweeper {
     }
     return 0;
   }
+
+  markBomb(x, y) {
+    this.setSquareValue(x, y, '*');
+    this.log('Square [' + x + ',' + y + '] flagged as bomb');
+  }
   valueIsBetween(value, min, max) {
     return value >= min && value <= max;
   }
