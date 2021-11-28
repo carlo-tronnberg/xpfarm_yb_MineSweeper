@@ -23,6 +23,10 @@ class MineSweeper {
     return this.gameBoard;
   }
 
+  drawGameBoard() {
+    return '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+  }
+
   log(message) {
     console.log(
       '[Sandbox %ix%i] %s',
