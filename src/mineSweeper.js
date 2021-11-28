@@ -4,10 +4,6 @@ class MineSweeper {
     this.createGameBoard(width, height);
   }
 
-  getStatus() {
-    return this.status;
-  }
-
   createGameBoard(width, height) {
     this.gameBoard = Array(height)
       .fill()
