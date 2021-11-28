@@ -39,4 +39,9 @@
   - Scenario #1 🟢 - 3x3
   - Scenario #2 🔴 - hiddden bombs board
   - Scenario #2 🟢
+
+### Pomodoro 🍅 2
+
+- User story #1 🚧
   - Scenario #2 🔴 - Game Board printout
+  - Scenario #2 🟢
