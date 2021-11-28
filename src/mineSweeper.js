@@ -67,9 +67,33 @@ class MineSweeper {
       message = 'BOOM! - Game Over';
     } else {
       this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
-      this.status = this.GAME_RUNNING;
+      if (this.winner()) {
+        this.showBombs();
+        this.status = this.GAME_WIN;
+        message = 'the land is cleared! GOOD JOB!';
+      } else {
+        this.status = this.GAME_RUNNING;
+        message = this.getSquareValue(x, y) + ' bomb(s) around your square.';
+      }
     }
     this.log(message);
+  }
+
+  winner() {
+    var isWinner = true;
+
+    this.gameBoard.forEach((row, i) => {
+      row.forEach((square, j) => {
+        if (this.squareIsSet(i, j)) {
+          isWinner = false;
+        }
+      });
+    });
+    return isWinner;
+  }
+
+  squareIsSet(i, j) {
+    return this.gameBoard[i][j] == ' ' && this.bombBoard[i][j] != 1;
   }
 
   getNeighbouringBombsCount(x, y) {
