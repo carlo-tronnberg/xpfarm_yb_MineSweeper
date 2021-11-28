@@ -81,3 +81,4 @@
 
 - User story #5 🚧
   - Scenario #1 🔴 - mark bombs
+  - Scenario #1 🟢
