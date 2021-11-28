@@ -4,6 +4,10 @@ class MineSweeper {
     this.createGameBoard(width, height);
   }
 
+  getStatus() {
+    return this.status;
+  }
+
   createGameBoard(width, height) {
     this.gameBoard = Array(height)
       .fill()
@@ -37,13 +41,37 @@ class MineSweeper {
   }
 
   setSquareValue(x, y, value) {
-    if (this.allowOperation(x, y)) {
+    if (this.allowOperation(x, y))
       this.gameBoard[this.gameBoard[0].length - 1 - y][x] = value;
-    }
   }
 
   allowOperation(x, y) {
     return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
+  }
+
+  stepOnSquare(x, y) {
+    var message = '';
+    if (this.getBombAt(x, y) == 1) {
+      this.status = 'Game Over';
+      this.setSquareValue(x, y, 'X');
+      message = 'BOOM! - Game Over';
+    } else {
+      this.setSquareValue(x, y, '_');
+      this.status = 'running';
+    }
+    this.log(message);
+  }
+
+  getBombAt(x, y) {
+    if (
+      x >= 0 &&
+      x <= this.gameBoard[0].length - 1 &&
+      y >= 0 &&
+      y <= this.gameBoard.length - 1
+    ) {
+      return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
+    }
+    return 0;
   }
 
   log(message) {
