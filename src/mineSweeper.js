@@ -54,7 +54,9 @@ class MineSweeper {
   }
 
   allowOperation(x, y) {
-    return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
+    return (
+      this.getSquareValue(x, y) === ' ' || this.getSquareValue(x, y) === '*'
+    );
   }
 
   stepOnSquare(x, y) {
@@ -100,6 +102,12 @@ class MineSweeper {
     this.setSquareValue(x, y, '*');
     this.log('Square [' + x + ',' + y + '] flagged as bomb');
   }
+
+  unmarkBomb(x, y) {
+    this.setSquareValue(x, y, ' ');
+    this.log('Square [' + x + ',' + y + '] unflagged as bomb');
+  }
+
   valueIsBetween(value, min, max) {
     return value >= min && value <= max;
   }
