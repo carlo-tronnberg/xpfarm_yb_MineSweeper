@@ -43,5 +43,12 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       game.setBombs(bombBoard);
       expect(game.getBombs()).toEqual(bombBoard);
     });
+
+    it('Given a Game Board width 3 and height 3,    When starting the game,    Then I want to create the empty Game Board and get it back as a string', () => {
+      const game = new MineSweeper(3, 3);
+      let gameBoardString =
+        '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+      expect(game.drawGameBoard()).toEqual(gameBoardString);
+    });
   });
 });

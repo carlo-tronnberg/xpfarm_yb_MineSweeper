@@ -39,3 +39,4 @@
   - Scenario #1 🟢 - 3x3
   - Scenario #2 🔴 - hiddden bombs board
   - Scenario #2 🟢
+  - Scenario #2 🔴 - Game Board printout
