@@ -35,3 +35,4 @@
   - Scenario #1 🟢
   - Scenario #1 🟢
   - Scenario #1 🔨 - Refactored createGameBoard
+  - Scenario #1 🟢 - 2x2
