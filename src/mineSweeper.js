@@ -43,7 +43,7 @@ class MineSweeper {
   }
 
   allowOperation(x, y) {
-    return true;
+    return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
   }
 
   log(message) {
