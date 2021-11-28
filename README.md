@@ -106,6 +106,14 @@ So that I can make a step
   Then the game should know whether I am allowed to do so
 ```
 
+#### Scenario #1
+
+```
+  Given the Game Board
+  When trying to step into an already set square
+  Then the game should stop me
+```
+
 ### User story #3 - Game Over - Lose the game by stepping on a bomb
 
 ```
