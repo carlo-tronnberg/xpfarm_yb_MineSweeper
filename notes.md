@@ -83,3 +83,4 @@
   - Scenario #1 🔴 - mark bombs
   - Scenario #1 🟢
   - Scenario #1 🔴 - unmark
+  - Scenario #1 🟢
