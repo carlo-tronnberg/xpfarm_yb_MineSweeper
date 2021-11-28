@@ -36,6 +36,16 @@ class MineSweeper {
     return gameBoardString;
   }
 
+  setSquareValue(x, y, value) {
+    if (this.allowOperation(x, y)) {
+      this.gameBoard[this.gameBoard[0].length - 1 - y][x] = value;
+    }
+  }
+
+  allowOperation(x, y) {
+    return true;
+  }
+
   log(message) {
     console.log(
       '[Sandbox %ix%i] %s',
