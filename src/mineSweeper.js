@@ -9,17 +9,23 @@ class MineSweeper {
   }
 
   createGameBoard(width, height) {
-    if (width == 2 && height == 1) {
-      this.gameBoard = [[' ', ' ']];
-    } else if (width == 1 && height == 2) {
-      this.gameBoard = [[' '], [' ']];
-    } else {
-      this.gameBoard = [[' ']];
-    }
+    this.gameBoard = Array(height)
+      .fill()
+      .map(() => Array(width).fill(' '));
+    this.log('Game created');
   }
 
   getBoard() {
     return this.gameBoard;
+  }
+
+  log(message) {
+    console.log(
+      '[Sandbox %ix%i] %s',
+      this.gameBoard[0].length,
+      this.gameBoard.length,
+      message
+    );
   }
 }
 
