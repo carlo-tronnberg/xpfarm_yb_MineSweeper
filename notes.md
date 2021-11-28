@@ -93,3 +93,4 @@
 - User story #7 🚧
   - Scenario #1 🔴 - massive clearing
   - Scenario #1 🟢
+  - Scenario #1 🟢
