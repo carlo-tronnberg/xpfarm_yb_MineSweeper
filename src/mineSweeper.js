@@ -6,6 +6,10 @@ class MineSweeper {
   getStatus() {
     return this.status;
   }
+
+  getBoard() {
+    return [[' ']];
+  }
 }
 
 module.exports = { MineSweeper };
