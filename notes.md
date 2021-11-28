@@ -51,3 +51,8 @@
   - Scenario #1 🟢
   - Scenario #2 🔴 - blocking operations
   - Scenario #2 🟢
+
+### Pomodoro 🍅 3
+
+- User story #3 🚧
+  - Scenario #1 🔴 - Game Over
