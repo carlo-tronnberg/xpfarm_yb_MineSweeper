@@ -48,3 +48,4 @@
   - Scenario #2 🔨
 - User story #2 🚧
   - Scenario #1 🔴
+  - Scenario #1 🟢
