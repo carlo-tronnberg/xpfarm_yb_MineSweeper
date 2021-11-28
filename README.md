@@ -73,6 +73,13 @@ So that I play the game
   Given the Game Board
   When starting the game
   Then I want to create the hidden Bombs Board, matching the Game Board dimension
+
+boards to create:
+  1,1
+  2,1
+  1,2
+  2,2
+  3,3
 ```
 
 #### Scenario #3
