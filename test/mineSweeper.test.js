@@ -68,4 +68,28 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       expect(game.allowOperation(0, 0)).toEqual(false);
     });
   });
+
+  describe('US3 Game Over - Lose the game by stepping on a bomb', () => {
+    it.each([
+      [0, 0, 'running'],
+      [1, 1, 'Game Over'],
+      [0, 1, 'Game Over'],
+      [0, 2, 'running'],
+    ])(
+      'Given the 3x3 Game Board,  When stepping on the square (%i,%i),  Then the game will be %s',
+      (x, y, status) => {
+        const game = new MineSweeper(3, 3);
+        game.setBombs([
+          [0, 0, 0], // ▲
+          [1, 1, 0], // |
+          [0, 1, 0], //  ——▶
+        ]);
+        expect(game.allowOperation(x, y)).toEqual(true);
+        game.stepOnSquare(x, y);
+        game.stepOnSquare(x, y);
+        expect(game.allowOperation(x, y)).toEqual(false);
+        expect(game.getStatus()).toEqual(status);
+      }
+    );
+  });
 });
