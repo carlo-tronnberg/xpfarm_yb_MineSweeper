@@ -39,7 +39,7 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
         [1, 1, 0],
         [0, 1, 0],
       ];
-      const game = new Game(width, height);
+      const game = new MineSweeper(width, height);
       game.setBombs(bombBoard);
       expect(game.getBombs()).toEqual(bombBoard);
     });

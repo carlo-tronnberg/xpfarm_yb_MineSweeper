@@ -11,6 +11,14 @@ class MineSweeper {
     this.log('Game created');
   }
 
+  setBombs(bombBoard) {
+    this.bombBoard = bombBoard;
+  }
+
+  getBombs() {
+    return this.bombBoard;
+  }
+
   getBoard() {
     return this.gameBoard;
   }
