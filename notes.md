@@ -42,7 +42,9 @@
 
 ### Pomodoro 🍅 2
 
-- User story #1 🚧
+- User story #1 ✅
   - Scenario #2 🔴 - Game Board printout
   - Scenario #2 🟢
   - Scenario #2 🔨
+- User story #2 🚧
+  - Scenario #1 🔴
