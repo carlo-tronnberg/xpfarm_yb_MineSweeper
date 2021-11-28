@@ -77,6 +77,8 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
     it.each([
       [0, 0, GAME_RUNNING],
       [1, 1, GAME_OVER],
+      [0, 1, GAME_OVER],
+      [0, 2, GAME_RUNNING],
     ])(
       'Given the 3x3 Game Board,  When stepping on the square (%i,%i),  Then the game will be %s',
       (x, y, status) => {
