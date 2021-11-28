@@ -1,6 +1,10 @@
 class MineSweeper {
+  GAME_RUNNING = 'running';
+  GAME_OVER = 'Game Over';
+  GAME_WIN = 'You Win';
+
   constructor(width, height) {
-    this.status = 'started';
+    this.status = this.GAME_RUNNING;
     this.createGameBoard(width, height);
   }
 
@@ -52,26 +56,18 @@ class MineSweeper {
   stepOnSquare(x, y) {
     var message = '';
     if (this.getBombAt(x, y) == 1) {
-      this.status = 'Game Over';
+      this.status = this.GAME_OVER;
       this.setSquareValue(x, y, 'X');
       message = 'BOOM! - Game Over';
     } else {
       this.setSquareValue(x, y, '_');
-      this.status = 'running';
+      this.status = this.GAME_RUNNING;
     }
     this.log(message);
   }
 
   getBombAt(x, y) {
-    if (
-      x >= 0 &&
-      x <= this.gameBoard[0].length - 1 &&
-      y >= 0 &&
-      y <= this.gameBoard.length - 1
-    ) {
-      return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
-    }
-    return 0;
+    return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
   }
 
   log(message) {
