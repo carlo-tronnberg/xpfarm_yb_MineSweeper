@@ -38,3 +38,4 @@
   - Scenario #1 🟢 - 2x2
   - Scenario #1 🟢 - 3x3
   - Scenario #2 🔴 - hiddden bombs board
+  - Scenario #2 🟢
