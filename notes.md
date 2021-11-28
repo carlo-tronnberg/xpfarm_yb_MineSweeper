@@ -50,3 +50,4 @@
   - Scenario #1 🔴
   - Scenario #1 🟢
   - Scenario #2 🔴 - blocking operations
+  - Scenario #2 🟢
