@@ -66,3 +66,6 @@
   - Scenario #2 🔨
   - Scenario #2 🔴 - neighboring bombs count
   - Scenario #2 🟢
+### Pomodoro 🍅 5
+- User story #3 🚧
+  - Scenario #3 🟢
