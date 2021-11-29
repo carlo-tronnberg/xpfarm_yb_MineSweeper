@@ -96,3 +96,4 @@
   - Scenario #1 🟢
 - UAT ✅
   - Scenario #1 📝
+  - Scenario #1 🔨 - CS
