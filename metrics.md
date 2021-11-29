@@ -10,7 +10,7 @@ Passed tests: 24
 | Type | Total | Covered | Skipped | Percentage |
 |------|------:|--------:|--------:|------------|
 | lines | 82 | 82 | 0 | 100.00% |
-| statements | 87 | 87 | 0 | 100.00% |
+| statements | 85 | 85 | 0 | 100.00% |
 | functions | 26 | 26 | 0 | 100.00% |
 | branches | 30 | 30 | 0 | 100.00% |
 
