@@ -19,18 +19,6 @@ class MineSweeper {
     this.log('Game created');
   }
 
-  setBombs(bombBoard) {
-    this.bombBoard = bombBoard;
-  }
-
-  getBombs() {
-    return this.bombBoard;
-  }
-
-  getBoard() {
-    return this.gameBoard;
-  }
-
   drawGameBoard() {
     let gameBoardString = '';
 
@@ -43,6 +31,27 @@ class MineSweeper {
     }
     gameBoardString += '+-'.repeat(this.gameBoard[0].length) + '+';
     return gameBoardString;
+  }
+
+  log(message) {
+    console.log(
+      this.drawGameBoard() + '\n\n[Sandbox %ix%i] %s',
+      this.gameBoard[0].length,
+      this.gameBoard.length,
+      message
+    );
+  }
+
+  setBombs(bombBoard) {
+    this.bombBoard = bombBoard;
+  }
+
+  getBombs() {
+    return this.bombBoard;
+  }
+
+  getBoard() {
+    return this.gameBoard;
   }
 
   setSquareValue(x, y, value) {
@@ -171,15 +180,6 @@ class MineSweeper {
 
   valueIsBetween(value, min, max) {
     return value >= min && value <= max;
-  }
-
-  log(message) {
-    console.log(
-      this.drawGameBoard() + '\n\n[Sandbox %ix%i] %s',
-      this.gameBoard[0].length,
-      this.gameBoard.length,
-      message
-    );
   }
 }
 
