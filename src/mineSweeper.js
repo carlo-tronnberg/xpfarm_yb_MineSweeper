@@ -33,10 +33,11 @@ class MineSweeper {
 
   drawGameBoard() {
     let gameBoardString = '';
-    for (var i = 0; i < this.gameBoard.length; i++) {
-      gameBoardString += '+-'.repeat(this.gameBoard[0].length) + '+\n|';
-      for (let j = 0; j < this.gameBoard[i].length; j++) {
-        gameBoardString += this.gameBoard[i][j] + '|';
+
+    for (let rowVector of this.gameBoard) {
+      gameBoardString += '+-'.repeat(rowVector.length) + '+\n|';
+      for (let columnVector of rowVector) {
+        gameBoardString += columnVector + '|';
       }
       gameBoardString += '\n';
     }
@@ -92,7 +93,7 @@ class MineSweeper {
       this.valueIsBetween(x, 0, this.gameBoard[0].length - 1) &&
       this.valueIsBetween(y, 0, this.gameBoard.length - 1) &&
       this.getBombAt(x, y) == 0 &&
-      this.checkedBoard[this.gameBoard[0].length - 1 - y][x] == false
+      !this.checkedBoard[this.gameBoard[0].length - 1 - y][x]
     ) {
       this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
       this.checkedBoard[this.gameBoard[0].length - 1 - y][x] = true;
