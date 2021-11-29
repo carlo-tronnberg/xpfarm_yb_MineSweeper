@@ -98,3 +98,4 @@
   - Scenario #1 📝
   - Scenario #1 🔨 - CS
   - Scenario #1 ⚙
+  - Scenario #1 ⚙
